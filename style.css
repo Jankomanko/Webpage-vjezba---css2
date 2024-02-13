@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+:root{
+    --pozadina:#f4f4f4;
+    --siva: #35424a;
+    --narancasta: #e8491d;
+    
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+html{
+    font-size: 62.5%;
+    height: 100%;
+}
+
+
+
+
+.container{
+    width: 80%;
+    margin: auto;
+    
+}
+
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/*Header*/
+
+header{
+    background-color: var(--siva);
+    display: flex;
+    border-bottom: var(--narancasta) 3px solid;
+    height: 6rem;
+
+}
+
+header img{
+    width: 9rem;
+    padding-bottom: 0.7rem;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.active{
+    color: var(--narancasta);
+}
+
+
+/* Main */
+
+#showcase{
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./images/showcase.jpg);
+    height: 40rem;
+    color: #fff;
+    display: flex;
+    text-align: center;
+    background-size: cover;
+}
+
+h1, 
+h1 span{
+    font-size: 6rem;
+
+}
+
+h1{
+    color: var(--narancasta);
+}
+
+h1 span{
+    color: #fff;
+}  
+
+/* Newsletter*/
+
+#newsletter{
+    background-color: var(--siva);
+}
+
+#newsletter .container{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    padding: 2rem 0;
+}
+
+#newsletter input{
+    outline: none;
+    width: 25rem;
+    
+}
+
+#newsletter input::placeholder{
+    color: black;
+}
+
+
+.btn{
+    background-color: var(--narancasta);
+    outline: none;
+    color: white;
+    border: none;
+    cursor:pointer;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+
+/**/
+
+
+#boxes .container{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 4rem;
+    text-align: center;
+    gap: 2rem
+    ;
+    
+}
+
+.kutija img{
+    width: 70%;
+
+}
+
+/**/
+
+footer{
+    background-color: var(--narancasta);
+    text-align: center;
+    color: white;
+    padding: 2rem 0;
+    margin-top: auto;
+}
+
+
+
+
+/*O nama*/
+
+#info .container{
+    display: flex;
+    gap: 2rem;
+}
+
+#info h1{
+    color: black;
+}
+
+#info p {
+    padding-top: 1.5rem;
+}
+
+#info h2{
+    font-size: 2.5rem;
+}
+
+article{
+    flex-basis: 70%;
+}
+
+
+
+aside{
+    flex-basis: 30%;
+    background-color: var(--siva);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+aside h2{
+    font-size: 2.2rem;
+}
+
+
+#kontakt{
+    list-style: none;
+
+}
+
+#kontakt li{
+    background-color: #e6e6e6;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+aside input,
+aside textarea{
+    display: block;
+    width: 100%;
+    outline: none;
+    padding: 0.5rem;
+    margin: 0.2rem;
+}
+
+aside input::placeholder,
+aside textarea::placeholder{
+    color: #000;
+}
+
+
+@media all and (max-width:1000px){
+    #info .container{
+        flex-direction: column;
+        margin-bottom: 3rem;
+    }
+}
+
+
+@media all and (max-width:750px){
+
+    html{
+        font-size: 55%;
+    }
+    .container{
+        width: 90%;
+    }
+}
+
+@media all and (max-width:550px){
+    #boxes .container,
+    #newsletter .container{
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}
